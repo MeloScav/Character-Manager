@@ -1,5 +1,5 @@
 # Character Manager 
 
 ## Author 
-Scavezzoni Méloé
+Scavezzoni Méloé    
 Andrioli Marah

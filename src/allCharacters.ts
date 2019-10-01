@@ -1,3 +1,4 @@
+// Generates a code to display all elements of the DB, global usage
 class AllCharacters {
     private axios: any;
 

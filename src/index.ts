@@ -1,6 +1,7 @@
 const axios = require('axios');
 import {AllCharacters} from "./allCharacters";
 
+// Creating a new "AllCharacters" and displaying items in html and console
 let a = async ()=>{
     try{
         const result = await new AllCharacters(axios);
@@ -9,6 +10,8 @@ let a = async ()=>{
                 const all = await result.getAllCharacters();
                 all.forEach((el:any)=>{
                     console.log(el.name);
+                    let divAllCaracters = document.getElementById("allCharacters");
+                    divAllCaracters.innerHTML += el.name;
                 })
             }
             catch(err){
@@ -22,33 +25,3 @@ let a = async ()=>{
     }
 }
 a()
-
-// const all = new AllCharacters(axios);
-
-// all.getAllCharacters().then(dataElement =>{
-//     dataElement.forEach((element: any) => {
-//         let divAllCaracters = document.getElementById("allCharacters");
-//         if (divAllCaracters){
-//             divAllCaracters.innerHTML = element.name;
-//         }
-
-//     });
-// }).catch(err =>{
-//     console.log(err)
-// })
-
-
-// const instance = axios.create({
-//     baseURL: "https://character-database.becode.xyz"
-//   });
-
-// let character = async ()=>{
-//     try{
-//         const result = await instance.get("/characters");
-//         console.log(result.data);
-//     }
-//     catch(err){
-//         console.log(err);
-//     }
-// }
-// character();

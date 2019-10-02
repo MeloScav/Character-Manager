@@ -34,19 +34,16 @@ inputSubmit.addEventListener("click",async ()=>{
     let inputName = (<HTMLInputElement>document.getElementById("name")).value;
     let inputShortDescription = (<HTMLInputElement> document.getElementById("shortDescription")).value;
     let inputDescription = (<HTMLInputElement> document.getElementById("description")).value;
-    let inputImage = (<HTMLInputElement>document.getElementById("image")).files[0];
+
+    let inputImage = (<HTMLInputElement>document.getElementById("image")).files;
     let preview:any;
     let reader  = new FileReader();
-    reader.addEventListener("load", function () {
+    reader.addEventListener("load", async function () {
         preview = reader.result;
-      }, false);
+        preview = preview.split(",");
+        console.log(preview[1]);
 
-    if (inputImage) {
-        reader.readAsDataURL(inputImage);
-      }
-      console.log(preview);
-
-    const rawResponse = await fetch('https://character-database.becode.xyz/characters', {
+        const rawResponse = await fetch('https://character-database.becode.xyz/characters', {
         method: 'POST',
         headers: {
         'Accept': 'application/json',
@@ -56,11 +53,19 @@ inputSubmit.addEventListener("click",async ()=>{
             name: inputName, 
             shortDescription: inputShortDescription ,
             description: inputDescription,
-            image: inputImage,
+            image: preview[1],
         })
     });
     const content = await rawResponse.json();
 
     console.log(content);
+
+      }, false);
+
+    if (inputImage) {
+        reader.readAsDataURL(inputImage[0]);
+      }
+
+    
  
 })

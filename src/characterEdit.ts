@@ -29,12 +29,13 @@ a();
 // input
 let inputSubmit = document.getElementById("submit");
 
-inputSubmit.addEventListener("click",async ()=>{
+inputSubmit.addEventListener("click",async (e)=>{
     //input
     let inputName = (<HTMLInputElement>document.getElementById("name")).value;
     let inputShortDescription = (<HTMLInputElement> document.getElementById("shortDescription")).value;
     let inputDescription = (<HTMLInputElement> document.getElementById("description")).value;
  
+    //let idHero = e.currentTarget;
     
     const rawResponse = await fetch('https://character-database.becode.xyz/characters/:id', {
         method: 'PUT',

@@ -1,13 +1,17 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: {
+    index :"./src/index.ts",
+    characterCreation : "./src/characterCreation.ts",
+    characterEdit: "./src/CharacterEdit.ts",
+  },
   mode: "development",
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        use: "ts-loader",
         exclude: /node_modules/,
       },
     ],
@@ -16,8 +20,9 @@ module.exports = {
     extensions: [ '.tsx', '.ts', '.js' ],
   },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
   },
   watch: true,
 };
+ 

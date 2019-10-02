@@ -75,7 +75,7 @@ function viewChar(el: any) {
     close.onclick = function () {
         viewDial.style.display = "none";
     }
-    console.log(el.id);
+
     let vDHero = document.getElementById("vDHero");
     vDHero.innerHTML = "";
 

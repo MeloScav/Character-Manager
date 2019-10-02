@@ -44,10 +44,15 @@ let a = async () => {
                     divButtons.appendChild(viewButt);
                     viewButt.addEventListener('click', () => { viewChar(el) });
 
-                    const editButt = document.createElement("button");
+                    // const editButt = document.createElement("button");
+                    // divButtons.appendChild(editButt);
+                    // editButt.className = "editButt";
+                    // editButt.innerHTML += "Edit";
+                    const editButt = document.createElement("a");
                     divButtons.appendChild(editButt);
                     editButt.className = "editButt";
-                    editButt.innerHTML += "Edit";
+                    editButt.textContent = "edit";
+                    editButt.href = `./CharacterEdit.html?id=${el.id}`;
 
                     const deletebutt = document.createElement("button");
                     divButtons.appendChild(deletebutt);

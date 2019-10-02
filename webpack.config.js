@@ -4,7 +4,7 @@ module.exports = {
   entry: {
     index :"./src/index.ts",
     characterCreation : "./src/characterCreation.ts",
-    characterEdit: "./src/characterEdit.ts",
+    characterEdit: "./src/CharacterEdit.ts",
   },
   mode: "development",
   module: {

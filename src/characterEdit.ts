@@ -34,20 +34,10 @@ inputSubmit.addEventListener("click",async ()=>{
     let inputName = (<HTMLInputElement>document.getElementById("name")).value;
     let inputShortDescription = (<HTMLInputElement> document.getElementById("shortDescription")).value;
     let inputDescription = (<HTMLInputElement> document.getElementById("description")).value;
-    let inputImage = (<HTMLInputElement>document.getElementById("image")).files[0];
-    let preview:any;
-    let reader  = new FileReader();
-    reader.addEventListener("load", function () {
-        preview = reader.result;
-      }, false);
-
-    if (inputImage) {
-        reader.readAsDataURL(inputImage);
-      }
-      console.log(preview);
-
-    const rawResponse = await fetch('https://character-database.becode.xyz/characters', {
-        method: 'POST',
+ 
+    
+    const rawResponse = await fetch('https://character-database.becode.xyz/characters/:id', {
+        method: 'PUT',
         headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -56,7 +46,6 @@ inputSubmit.addEventListener("click",async ()=>{
             name: inputName, 
             shortDescription: inputShortDescription ,
             description: inputDescription,
-            image: inputImage,
         })
     });
     const content = await rawResponse.json();

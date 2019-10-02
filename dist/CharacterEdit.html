@@ -7,15 +7,37 @@
 </head>
 <body>
     <form>
-        <label for="name"> Edit the name </label>
-        <input type="text" name="name" id="name">
-        <label for="shortDescription" > Edit the short description </label>
-        <input type="shortDescription" name="shortDescription" id="shortDescription" >
-        <label for="description" > Edit the description </label>
-        <input type="description" name="description" id="description" >
-        <button type="button" id="submit">Submit</button>
+        <fieldset>
+            <legend>Name</legend>
+            <div id="divName">  
+                <label for="name"> Enter a name </label>
+                <input type="text" name="name" id="name">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Short description</legend>
+            <div id="divShortDescription">
+                <label for="shortDescription" > Enter a short description </label>
+                <input type="shortDescription" name="shortDescription" id="shortDescription" >
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Full description</legend>
+            <div id="divDescription">
+                <label for="description" > Enter a description </label>
+                <input type="description" name="description" id="description" >
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Upload a image</legend>
+            <div id="divImage">
+                <input type="file" name="image" id="image" >
+            </div>
+        </fieldset>
+        <div id=divButton>
+            <button type="button" id="submit">Submit</button>
+        </div>
     </form>
-    <div id="test"></div>
     <script src="characterEdit.js"></script>
 </body>
 </html>

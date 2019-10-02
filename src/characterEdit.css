@@ -1,11 +1,13 @@
 body{
     font-family: Verdana, Tahoma, sans-serif;
+    background-color: #354A66;
 }
 
 .blocContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 form{
@@ -14,11 +16,11 @@ form{
 }
 
 fieldset {
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     border-color: purple;
 }
 legend{
-    color: red;
+    color: #fff;
 }
 
 .divButton{

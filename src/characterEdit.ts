@@ -29,7 +29,7 @@ a();
 // input
 let inputSubmit = document.getElementById("submit");
 
-inputSubmit.addEventListener("click",async (e)=>{
+inputSubmit.addEventListener("click",async ()=>{
     //input
     let inputName = (<HTMLInputElement>document.getElementById("name")).value;
     let inputShortDescription = (<HTMLInputElement> document.getElementById("shortDescription")).value;
@@ -86,4 +86,5 @@ inputSubmit.addEventListener("click",async (e)=>{
 
     console.log(inputName,inputShortDescription,inputDescription,preview[1])
  
+    //let d = e.target.parentElement.getAttributes("name");
 })

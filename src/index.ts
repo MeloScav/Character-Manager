@@ -102,7 +102,7 @@ function viewChar(el: any) {
     const pD = document.createElement("p");
     vDHero.appendChild(pD);
     pD.className = "pDHero";
-    pD.innerHTML += el.description;
+    pD.innerHTML += `Description :  ${el.description}`;
 }
 
 

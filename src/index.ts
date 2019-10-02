@@ -24,4 +24,13 @@ let a = async ()=>{
         console.log(err);
     }
 }
-a()
+a();
+
+// axios.post("https://character-database.becode.xyz/characters",{
+//             name:"Lulu",
+//             shortDescription: "Un petit lutin",
+//             Description: "Un petit et jeune lutin âgé de 150ans",
+//             image: "image",
+//         });
+
+

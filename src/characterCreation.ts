@@ -1,22 +1,4 @@
 const axios = require('axios');
-//import {Character} from "./character";
-
-// const instance = axios.create({
-//     baseURL: "https://character-database.becode.xyz"
-// });
-
-// let add = async ()=>{
-//     try{
-//         const resultAdd = new Character("Lulu", "Un petit lutin", "Un petit et jeune lutin âgé de 150ans", "image");
-//         const response = await instance.post(`/characters,{${JSON.stringify(resultAdd)}}`);
-//         console.log(response);
-//     }
-//     catch(err){
-//         console.error(err);
-//     }
-// }
-// add();
-
 
 import {AllCharacters} from "./allCharacters";
 
@@ -28,7 +10,7 @@ let a = async ()=>{
             try{
                 const all = await result.getAllCharacters();
                 all.forEach((el:any)=>{
-                    console.log(el.name);
+                    console.log(el);
                 })
             }
             catch(err){
@@ -44,20 +26,30 @@ let a = async ()=>{
 a();
 
 
-(async () => {
+// input
+let inputSubmit = document.getElementById("submit");
+
+inputSubmit.addEventListener("click",async ()=>{
+    //input
+    let inputName = (<HTMLInputElement>document.getElementById("name")).value;
+    let inputShortDescription = (<HTMLInputElement> document.getElementById("shortDescription")).value;
+    let inputDescription = (<HTMLInputElement> document.getElementById("description")).value;
+    // let inputImage = document.getElementById("image");
+
     const rawResponse = await fetch('https://character-database.becode.xyz/characters', {
-    method: 'POST',
-    headers: {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-        name: "Monstrueux lulu", 
-        shortDescription: "Un petit lutin",
-        description: "Un petit et jeune lutin âgé de 150ans"
-    })
+        method: 'POST',
+        headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: inputName, 
+            shortDescription: inputShortDescription ,
+            description: inputDescription,
+        })
     });
     const content = await rawResponse.json();
 
     console.log(content);
-})();
+ 
+})

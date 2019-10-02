@@ -3,7 +3,8 @@ const path = require('path');
 module.exports = {
   entry: {
     index :"./src/index.ts",
-    characterCreation : "./src/characterCreation.ts"
+    characterCreation : "./src/characterCreation.ts",
+    characterEdit: "./src/characterEdit.ts",
   },
   mode: "development",
   module: {

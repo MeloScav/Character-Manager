@@ -28,12 +28,11 @@ legend{
     margin-top: 5px;
 }
 
-#submitCreation{
+#submit{
     background-color: rgb(123, 29, 139, 0.5);
     color: #fff;
     border-color: rgb(115, 210, 222);
 }
-#submitCreation:hover{
+#submit:hover{
     box-shadow: 1px 1px 7px 1px #2364aa;
 }
-

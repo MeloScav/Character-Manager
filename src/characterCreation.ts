@@ -27,7 +27,7 @@ a();
 
 
 // input
-let inputSubmit = document.getElementById("submit");
+let inputSubmit = document.getElementById("submitCreation");
 
 inputSubmit.addEventListener("click",async ()=>{
     //input

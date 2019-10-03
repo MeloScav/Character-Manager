@@ -1,5 +1,10 @@
 body{
     font-family: Verdana, Tahoma, sans-serif;
+    color: black;
+    font-family: 'Patrick Hand', cursive;
+    background-image: url('/assets/bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .blocContainer{
@@ -14,11 +19,13 @@ form{
 }
 
 fieldset {
-    background-color: #fff;
-    border-color: purple;
+    background-color: rgb(255, 255, 255, 0.7);
+    border: 2px solid black;
+    border-radius: 10px;
 }
 legend{
-    color: red;
+    color: black;
+    font-weight: bold;
 }
 
 .divButton{
@@ -29,11 +36,12 @@ legend{
 }
 
 #submitCreation{
-    background-color: rgb(123, 29, 139, 0.5);
-    color: #fff;
-    border-color: rgb(115, 210, 222);
+    background-color: rgb(255, 255, 255, 0.7);
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
 }
 #submitCreation:hover{
-    box-shadow: 1px 1px 7px 1px #2364aa;
+    border-color: #F92209;
 }
 

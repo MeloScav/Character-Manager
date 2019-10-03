@@ -1,6 +1,6 @@
 body{
     font-family: Verdana, Tahoma, sans-serif;
-    background-color: #354A66;
+    background-color: #6582B2;
 }
 
 .blocContainer{
@@ -16,11 +16,12 @@ form{
 }
 
 fieldset {
-    background-color: rgb(255, 255, 255);
-    border-color: purple;
+    background-color: #E9D6EC;
+    border-color: #CC2936;
 }
 legend{
-    color: #fff;
+    color: black;
+    font-weight: bold;
 }
 
 .divButton{
@@ -31,10 +32,10 @@ legend{
 }
 
 #submit{
-    background-color: rgb(123, 29, 139, 0.5);
-    color: #fff;
-    border-color: rgb(115, 210, 222);
+    background-color: #E9D6EC;
+    color: black;
+    border-color: #CC2936;
 }
 #submit:hover{
-    box-shadow: 1px 1px 7px 1px #2364aa;
+    border-color: #F39237;
 }

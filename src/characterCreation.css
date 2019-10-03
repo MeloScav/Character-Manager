@@ -2,7 +2,7 @@ body{
     font-family: Verdana, Tahoma, sans-serif;
     color: black;
     font-family: 'Patrick Hand', cursive;
-    background-image: url('bg.jpeg');
+    background-image: url('../assets/bg.jpeg');
     background-repeat: no-repeat;
     background-size: 100%;
 }

@@ -1,7 +1,7 @@
 body {
     color: black;
     font-family: 'Patrick Hand', cursive;
-    background-image: url('/assets/bg.jpeg');
+    background-image: url('./bg.jpeg');
     background-size: contain;
 
 }
@@ -100,7 +100,7 @@ div#viewDialog {
 
 #vDHero {
     border: 1px solid red;
-    background-image: url('/assets/fond.png');
+    background-image: url('./fond.png');
     background-color: rgb(79, 161, 255);
     padding: 30px;
     border: 3px solid black;

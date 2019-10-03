@@ -47,7 +47,7 @@ inputSubmit.addEventListener("click", async () => {
         preview = preview.split(",");
         console.log(preview[1]);
 
-        const rawResponse = await fetch(`https://character-database.becode.xyz/characters/${id}`, {
+        const rawResponse = await fetch(`https://character-database.becode.xyz/characters`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -71,7 +71,7 @@ inputSubmit.addEventListener("click", async () => {
     }
 
 
-    const rawResponse = await fetch('https://character-database.becode.xyz/characters/:id', {
+    const rawResponse = await fetch(`https://character-database.becode.xyz/characters/${id}`, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json',

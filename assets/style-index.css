@@ -3,14 +3,22 @@ body {
     font-family: 'Patrick Hand', cursive;
     background-image: url('/assets/bg.jpeg');
     background-size: contain;
+}
 
+h1 {
+    text-align: center;
+}
+
+#addChar {
+    text-align: center;
+    margin: auto;
 }
 
 div#allCharacters {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
+    justify-content: center;
 }
 
 div.eachChar {
@@ -36,12 +44,14 @@ img {
 }
 
 h2 {
-    text-align: center;
     font-size: 20px
 }
 
+
+
 em {
     padding-bottom: 10px;
+    text-align: Center;
 }
 
 .groupButt {

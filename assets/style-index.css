@@ -12,6 +12,15 @@ body {
     border-radius: 10px;
     width: 200px;
 }
+a{
+    text-decoration: none;
+}
+a:link{
+    color: black;
+}
+a:visited{
+    color: black;
+}
 
 div#allCharacters {
     display: flex;

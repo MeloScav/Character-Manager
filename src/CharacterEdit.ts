@@ -2,6 +2,10 @@ const axios = require('axios');
 
 import { AllCharacters } from "./allCharacters";
 
+let url_string = window.location.href; // url
+var url = new URL(url_string);
+var id = url.searchParams.get("id"); //recupère id
+
 // Creating a new "AllCharacters" and displaying items in html and console
 let a = async () => {
     try {
@@ -43,7 +47,7 @@ inputSubmit.addEventListener("click", async () => {
         preview = preview.split(",");
         console.log(preview[1]);
 
-        const rawResponse = await fetch('https://character-database.becode.xyz/characters', {
+        const rawResponse = await fetch(`https://character-database.becode.xyz/characters/${id}`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -86,5 +90,5 @@ inputSubmit.addEventListener("click", async () => {
 
     console.log(inputName, inputShortDescription, inputDescription, preview[1])
 
-    //let d = e.target.parentElement.getAttributes("name");
+
 })
